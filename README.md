@@ -9,3 +9,5 @@ https://lidarlist.com/
 https://www.formulastudent.de/fileadmin/user_upload/all/2025/rules/FS-Rules_2025_v1.1.pdf
 
 https://github.com/TUMFTM
+
+https://github.com/changh95/visual-slam-roadmap?tab=readme-ov-file
