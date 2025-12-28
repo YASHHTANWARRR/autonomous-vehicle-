@@ -40,15 +40,19 @@ def generate_launch_description():
     )
     
     #Gazebo node
-    spawnModelNodeGazebo= Node(
-        package='ros_gz_sim',
-        executable='create',
-        arguments=[
-            '-topic', 'robot_description',
-            '-name', robotXacroName,
-        ],
-        output='screen',
-    )
+    spawnModelNodeGazebo = Node(
+    package='ros_gz_sim',
+    executable='create',
+    arguments=[
+        '-topic', 'robot_description',
+        '-name', robotXacroName,
+        '-x', '0',
+        '-y', '0',
+        '-z', '0.5'
+    ],
+    output='screen',
+)
+
     
     #Robot State Publisher Node
     nodeRobotStatePublisher= Node(
