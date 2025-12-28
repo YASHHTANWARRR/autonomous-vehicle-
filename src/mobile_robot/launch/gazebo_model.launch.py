@@ -29,7 +29,7 @@ def generate_launch_description():
     #launch file froom gazebo_ros package
     gazebo_rosPackageLaunch=PythonLaunchDescriptionSource(
         os.path.join(get_package_share_directory('ros_gz_sim'),
-                    launch',
+                    'launch',
                     'gz_sim.launch.py')
     )
 
@@ -68,7 +68,7 @@ def generate_launch_description():
     
     #package to bridging the gap 
     start_gazebo_ros_bridge_cmd = Node(
-        ppackage='ros_gz_bridge',
+        package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=[
             '--ros_args',
