@@ -118,11 +118,32 @@
 
 <!-- INERTFACE FOR COMTROLS -->
 
-
+<!-- FICTOUS LINK  -->
 <!-- DEFINING LINKS ANDS JOINTS -->
+<link name  = "body_footprint"></link>
+<joint name "body_link_joint" type = "fixed">
+   <parent link = " base_footprint "/>
+   <child link = "body_link"/>
+</joint>
 
+<!-- BODY LINK OF ROBOT -->
+<link name = "body_link">
+   <visual>
+      <geometry>
+         <box size = "${body_length} ${body_width} ${body_height}"/>
+      </geometry>
+      <origin xyz="0 0 ${s1}" rpy = "0 0 0"/>   
+   </visual>
 
+   <collison>
+      <geometry>
+         <box size = "${body_length} ${body_width} ${body_height}"/>
+      </geometry>
+      <origin xyz="0 0 ${s1}" rpy = "0 0 0"/>
+   </collison>
 
+   <xacro:inertia_body_macro/>
+</link>
 
 
 
