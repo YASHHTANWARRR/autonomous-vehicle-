@@ -23,10 +23,7 @@
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/activate
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/pip3.12
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/xacro
-/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/python3
-/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/python
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/activate.fish
-/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/python3.12
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/lib/python3.12/site-packages/pip/__pycache__/__main__.cpython-312.pyc
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/lib/python3.12/site-packages/pip/__pycache__/__init__.cpython-312.pyc
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/lib/python3.12/site-packages/pip/__pycache__/__pip-runner__.cpython-312.pyc
