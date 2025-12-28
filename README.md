@@ -12,3 +12,7 @@ https://www.formulastudent.de/fileadmin/user_upload/all/2025/rules/FS-Rules_2025
 https://github.com/TUMFTM
 
 https://github.com/changh95/visual-slam-roadmap?tab=readme-ov-file
+
+BASIC ROBOT WITH CASTOR WHEEL GEOMETRY :
+<img width="664" height="778" alt="image" src="https://github.com/user-attachments/assets/927d64a4-8099-4be4-9fe6-5dad6aad7f5f" />
+
