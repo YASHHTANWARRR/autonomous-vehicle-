@@ -85,6 +85,9 @@
    value = "${(2/5)*castor_mass*radius*radius}" />
 
 <!-- complete inertial system of the body -->
+<!-- FILE THAT INCLUDES GAZEBO OPTIONS AND MOTION CONTROLS-->
+<xacro:include filename ="$(find mobile_robot)/model/robot.gazebo"/>
+
 <!-- THE BASIC COORDINATE SYSTEM IS CENTERED AT THE GEOMETRIC CENTER OF THE BODY LINK -->
 
 
