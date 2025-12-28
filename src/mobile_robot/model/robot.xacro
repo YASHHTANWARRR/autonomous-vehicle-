@@ -69,12 +69,15 @@
    value = "${(1/12)*body_mass*(body_length*body_length + body_height*body_height)}" />
 
 <!-- WHEEL LINK MOMENT OF INERTIA -->
-<xacro:property name = "Ix_wheel"
-   value = "${(1/12*wheel_mass)*(3*radius*radius + width*width)}" />
-<xacro:property name = "Iy_wheel"
-   value = "${(1/12)*wheel_mass*(radius*radius + width*width)}" />
-<xacro:property name = "Iz_wheel"
-   value = "${(1/2)*wheel_mass*radius*radius}" />
+<xacro:property name="Ix_wheel"
+   value="${(1/12)*wheel_mass*(3*radius*radius + width*width)}"/>
+
+<xacro:property name="Iy_wheel"
+   value="${(1/2)*wheel_mass*radius*radius}"/>
+
+<xacro:property name="Iz_wheel"
+   value="${(1/12)*wheel_mass*(3*radius*radius + width*width)}"/>
+
 
 <!-- CASTOR LINK MOMENT OF INERTIA -->
 <xacro:property name = "Ix_castor"
@@ -98,7 +101,8 @@
    <mass value = "${body_mass}"/>
    <inertia ixx ="${Ix_body}" ixy = "0.0" ixz ="0.0" iyy ="${Iy_body}" iyz = "0.0" izz= "${Iz_body}"/>
    </inertial>
-</xacro:body_link_macro>
+</xacro:macro>
+
 
 <!-- WHEEL LINK -->
 <xacro:macro name = "wheel_link_macro">
@@ -107,7 +111,8 @@
    <mass value = "${wheel_mass}"/>
    <inertia ixx ="${Ix_wheel}" ixy="0.0" ixz="0.0" iyy="${Iy_wheel}" iyz ="0.0" izz="${Iz_wheel}"/>
    </inertial>
-</xacro:wheel_link_macro>
+</xacro:macro>
+
 
 <!-- CASTOR LINK -->
 <xacro:macro name = "castor_link_macro">
@@ -116,7 +121,7 @@
    <mass value = "${castor_mass}"/>
    <inertia ixx = "${Ix_castor}" ixy= "0.0" ixz="0.0" iyy="${Iy_castor}" iyz="0.0" izz= "${Iz_castor}"/>
    </inertial>
-</xacro:castor_link_macro>
+</xacro:macro>
 
 
 <!-- INERTFACE FOR COMTROLS -->
@@ -125,7 +130,7 @@
 <!-- DEFINING LINKS ANDS JOINTS -->
 <link name  = "body_footprint"></link>
 <joint name = "body_link_joint" type = "fixed">
-   <parent link = " body_footprint "/>
+   <parent link = "body_footprint"/>
    <child link = "body_link"/>
 </joint>
 
