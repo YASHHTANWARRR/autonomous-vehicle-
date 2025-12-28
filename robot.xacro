@@ -7,35 +7,32 @@
 <!-- BODY LINK DIMENSIONS  -->
 <!-- units used in meters -->
 
- <xacro:property name = "body_length" 
-    value ="1"/>
- <xacro:property name = "body_height" 
-    value ="0.6"/>
- <xacro:property name = "body_width" 
-    value ="0.3"/>
+<xacro:property name = "body_length" 
+   value ="1"/>
+<xacro:property name = "body_height" 
+   value ="0.6"/>
+<xacro:property name = "body_width" 
+   value ="0.3"/>
 
 <!-- WHEEL DIMENSIONS  AND CASTOR DIMENSIONS -->
 <!-- RADIUS -->
 <xacro:property name = "radius" 
-    value = "0.15"/>
-<! -- WIDTH  WHEEL -- >
+   value = "0.15"/>
+<!-- WIDTH  WHEEL -->
 <xacro:property name ="width" 
-    value ="0.1"/>
+   value ="0.1"/>
 
 <!-- other dimensions -->
- <xacro:property name = "s1" 
-    value = "${body_height/2 + radius}"/>
- <xacro:property name = "s2"
- value ="${radius*2}"/>
- <xacro:property name = name "s3"
-    value = "${radius*2}"/>
- <xacro:property name = "s4"
+<xacro:property name = "s1" 
+   value = "${body_height/2 + radius}"/>
+<xacro:property name = "s2"
+   value ="${radius*2}"/>
+<xacro:property name = "s3"
+   value = "${radius*2}"/>
+<xacro:property name = "s4"
    value ="${body_width/2 + width/2}"/>
 
-
-
 <!-- MASS NAD INERTIA -->
-
 
 <!-- DENSITY -->
 <!-- BODY LINK -->
@@ -52,12 +49,15 @@
 <!-- BODY LINK MASS -->
 <xacro:property name = "body_mass"
    value = "${body_link*body_length*body_width*body_height}"/>
+
 <!-- WHEEL LINK MASS -->
 <xacro:property name = "wheel_mass"
    value = "${wheel_link*pi_const*radius*radius*width}"/>
+
 <!-- CASTOR LINK MASS -->
 <xacro:property name = "castor_mass"
    value = "${castor_link*(4/3)*pi_const*radius*radius*radius}"/>
+
 <!--MOMENT OF INERTIA -->
 
 <!-- BODY LINK MOMENT OF INERTIA -->
@@ -67,6 +67,7 @@
    value = "${(1/12)*body_mass*(body_length*body_length + body_width*body_width)}" />
 <xacro:property name = "Iz_body"
    value = "${(1/12)*body_mass*(body_length*body_length + body_height*body_height)}" />
+
 <!-- WHEEL LINK MOMENT OF INERTIA -->
 <xacro:property name = "Ix_wheel"
    value = "${(1/12*wheel_mass)*(3*radius*radius + width*width)}" />
@@ -77,11 +78,51 @@
 
 <!-- CASTOR LINK MOMENT OF INERTIA -->
 <xacro:property name = "Ix_castor"
-   value = "${(2/5)*castor_mass*radius*radius*radius}" />
+   value = "${(2/5)*castor_mass*radius*radius}" />
 <xacro:property name = "Iy_castor"
-   value = "${(2/5)*castor_mass*radius*radius*radius}" />
+   value = "${(2/5)*castor_mass*radius*radius}" />
 <xacro:property name = "Iz_castor"
-   value = "${(2/5)*castor_mass*radius*radius*radius}" />
+   value = "${(2/5)*castor_mass*radius*radius}" />
+
+<!-- complete inertial system of the body -->
+<!-- THE BASIC COORDINATE SYSTEM IS CENTERED AT THE GEOMETRIC CENTER OF THE BODY LINK -->
+
+
+<!-- BODY LINK -->
+<xacro:macro name = "body_link_macro">
+   <inertial>
+   <origin xyz = " 0 0 ${s1}" rpy = "0 0 0"/>
+   <mass value = "${body_mass}"/>
+   <inertia ixx ="${Ix_body}" ixy = "0.0" ixz ="0.0" iyy ="${Iy_body}" iyz = "0.0" izz= "${Iz_body}"/>
+   </inertial>
+</xacro:macro>
+
+<!-- WHEEL LINK -->
+<xacro:macro name = "wheel_link_macro">
+   <inertial>
+   <origin xyz = "0 0 0" rpy = " 1.570795 0 0"/>
+   <mass value = "${wheel_mass}"/>
+   <inertia ixx ="${Ix_wheel}" ixy="0.0" ixz="0.0" iyy="${Iy_wheel}" iyz ="0.0" izz="${Iz_wheel}"/>
+   </inertial>
+</xacro:macro>
+
+<!-- CASTOR LINK -->
+<xacro:macro name = "castor_link_macro">
+   <inertial>
+   <origin xyz = "0 0 0" rpy = "0 0 0"/>
+   <mass value = "${castor_mass}"/>
+   <inertia ixx = "${Ix_castor}" ixy= "0.0" ixz="0.0" iyy="${Iy_castor}" iyz="0.0" izz= "${Iz_castor}"/>
+   </inertial>
+</xacro:macro>
+
+
+<!-- INERTFACE FOR COMTROLS -->
+
+
+<!-- DEFINING LINKS ANDS JOINTS -->
+
+
+
 
 
 
