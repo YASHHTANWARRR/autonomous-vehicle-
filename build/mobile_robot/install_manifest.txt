@@ -1,0 +1,15 @@
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/ament_index/resource_index/package_run_dependencies/mobile_robot
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/ament_index/resource_index/parent_prefix_path/mobile_robot
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/environment/ament_prefix_path.sh
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/environment/ament_prefix_path.dsv
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/environment/path.sh
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/environment/path.dsv
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/local_setup.bash
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/local_setup.sh
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/local_setup.zsh
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/local_setup.dsv
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/package.dsv
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/ament_index/resource_index/packages/mobile_robot
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/cmake/mobile_robotConfig.cmake
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/cmake/mobile_robotConfig-version.cmake
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/package.xml
