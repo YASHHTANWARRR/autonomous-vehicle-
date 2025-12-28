@@ -1,0 +1,12 @@
+ros_topic_name : "clock"
+gz_topic_name: "clock"
+ros_message_type: "rosgraph_msgs/msg/Clock"
+gz_type_name: "gz.msgs.Clock"
+direction: "GZ_TO_ROS"
+
+#gz topic published by JointState plugin
+ros_topic_name: "joint_states"
+gz_topic_name: "joint_states"
+ros_message_type: "sensor_msgs/msg/JointState"
+gz_type_name: "gz.msgs.Model"
+direction: "GZ_TO_ROS"
