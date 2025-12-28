@@ -23,6 +23,15 @@
     value ="0.1"/>
 
 <!-- other dimensions -->
+ <xacro:property name = "s1" 
+    value = "${body_height/2 + radius}"/>
+ <xacro:property name = "s2"
+ value ="${radius*2}"/>
+ <xacro:property name = name "s3"
+    value = "${radius*2}"/>
+ <xacro:property name = "s4"
+ value ="${body_width/2 + width/2}"/>
 
+<!-- MASS NAD INERTIA -->
 
 </robot>
