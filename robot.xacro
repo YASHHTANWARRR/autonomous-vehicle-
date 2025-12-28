@@ -9,9 +9,9 @@
 
  <xacro:property name = "body_length" 
     value ="1"/>
- <xacro:property name = "body_width" 
-    value ="0.6"/>
  <xacro:property name = "body_height" 
+    value ="0.6"/>
+ <xacro:property name = "body_width" 
     value ="0.3"/>
 
 <!-- WHEEL DIMENSIONS  AND CASTOR DIMENSIONS -->
@@ -57,5 +57,36 @@
    value = "${wheel_link*pi_const^2*radius*width}"/>
 <!-- CASTOR LINK MASS -->
 <xacro:property name = "castor_mass"
-   value = "${castor_link*1.3333*pi_const*radius^3}"/>
+   value = "${castor_link*(4/3)*pi_const*radius^3}"/>
+
+
+<!--MOMENT OF INERTIA -->
+
+<!-- BODY LINK MOMENT OF INERTIA -->
+<xacro:property name = "Ix_body"
+   value = "${(1/12)*body_mass*(body_height^2 + body_width^2)}" />
+<xacro:property name = "Iy_body"
+   value = "${(1/12)*body_mass*(body_length^2 + body_width^2)}" />
+<xacro:property name = "Iz_body"
+   value = "${(1/12)*body_mass*(body_length^2 + body_height^2)}" />
+
+<!-- WHEEL LINK MOMENT OF INERTIA -->
+<xacro:property name = "Ix_wheel"
+   value = "${(1/12*wheel_mass)*(3*radius^2 + width^2)}" />
+<xacro:property name = "Iy_wheel"
+   value = "${(1/12)*wheel_mass*(radius^2 + width^2)}" />
+<xacro:property name = "Iz_wheel"
+   value = "${(1/2)*wheel_mass*radius^2}" />
+
+<!-- CASTOR LINK MOMENT OF INERTIA -->
+<xacro:property name = "Ix_castor"
+   value = "${(2/5)*castor_mass*radius^3}" />
+<xacro:property name = "Iy_castor"
+   value = "${(2/5)*castor_mass*radius^3}" />
+<xacro:property name = "Iz_castor"
+   value = "${(2/5)*castor_mass*radius^3}" />
+
+
+
+
 </robot>
