@@ -16,10 +16,10 @@
 
 <!-- WHEEL DIMENSIONS  AND CASTOR DIMENSIONS -->
 <!-- RADIUS -->
-  <xacro:property name = "radius" 
+<xacro:property name = "radius" 
     value = "0.15"/>
 <! -- WIDTH  WHEEL -- >
-    <xacro:property name ="width" 
+<xacro:property name ="width" 
     value ="0.1"/>
 
 <!-- other dimensions -->
@@ -30,8 +30,32 @@
  <xacro:property name = name "s3"
     value = "${radius*2}"/>
  <xacro:property name = "s4"
- value ="${body_width/2 + width/2}"/>
+   value ="${body_width/2 + width/2}"/>
+
+
 
 <!-- MASS NAD INERTIA -->
 
+
+<!-- DENSITY -->
+<!-- BODY LINK -->
+<xacro:macro name = "body_link" 
+   value = "2710.0"/>
+<!-- WHEEL LINK -->
+<xacro:property name = "wheel_link" 
+   value = "2710.0"/>
+<!-- CASTOR LINK -->
+<xacro:property name = "castor_link"
+   value = "2710.0"/>
+
+<!-- MASS -->
+<!-- BODY LINK MASS -->
+<xacro:property name = "body_mass"
+   value = "${body_linkk*body_length*body_width*body_height}"/>
+<!-- WHEEL LINK MASS -->
+<xacro:property name = "wheel_mass"
+   value = "${wheel_link*pi_const^2*radius*width}"/>
+<!-- CASTOR LINK MASS -->
+<xacro:property name = "castor_mass"
+   value = "${castor_link*1.3333*pi_const*radius^3}"/>
 </robot>
