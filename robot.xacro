@@ -146,5 +146,59 @@
 </link>
 
 
+<!-- WHEEL JOINT -->
+<joint name="wheel1_joint" type ="continuous">
+   <parent link = "body_link"/>
+   <child link = "wheel1_link"/>
+   <origin xyz= " ${-s2} ${-s4} {r}" rpy="0 0 0"/>
+   <axis xyz= "0 1 0"/>
+   <limit effort = "100000" velocity= "10"/>
+   <dyanmic damping ="1.0" friction ="1.0"/>
+</joint>
+
+<link name = "wheel1_link">
+   <visaul>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </visual>   
+
+   <collision>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </collision>
+
+   <xacro:inertia_wheel_macro/>
+</link>
+
+<joint name="wheel2_joint" type ="continuous">
+   <parent link = "body_link"/>
+   <child link = "wheel2_link"/>
+   <origin xyz= " ${-s2} ${s4} {r}" rpy="0 0 0"/>
+   <axis xyz= "0 1 0"/>
+   <limit effort = "100000" velocity= "10"/>
+   <dyanmic damping ="1.0" friction ="1.0"/>
+</joint>
+
+<link name = "wheel2_link">
+   <visaul>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </visual>   
+
+   <collision>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </collision>
+
+   <xacro:inertia_wheel_macro/>
+</link>
 
 </robot>
