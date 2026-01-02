@@ -8,19 +8,20 @@
 <!-- units used in meters -->
 
 <xacro:property name = "body_length" 
-   value ="1.5"/>
-<xacro:property name = "body_height" 
-   value ="0.35"/>
+   value ="1.0"/>
 <xacro:property name = "body_width" 
-   value ="0.55"/>
+   value ="0.3"/>
+<xacro:property name = "body_height" 
+   value ="0.6"/>
+
 
 <!-- WHEEL DIMENSIONS  AND CASTOR DIMENSIONS -->
 <!-- RADIUS -->
 <xacro:property name = "radius" 
-   value = "0.18"/>
+   value = "0.15"/>
 <!-- WIDTH  WHEEL -->
 <xacro:property name ="width" 
-   value ="0.12"/>
+   value ="0.1"/>
 
 <!-- other dimensions -->
 <xacro:property name = "s1" 
