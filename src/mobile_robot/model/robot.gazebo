@@ -32,7 +32,7 @@
         <right_joint>wheel1_joint</right_joint>
         <left_joint>wheel2_joint</left_joint>
 
-        <wheel_separation>${2*s4}</wheel_separation>
+        <wheel_separation>${2*s4}</wheel_separation>0
         <wheel_diameter>${radius}</wheel_diameter>
 
         <max-linear_acceleration>10.0</max-linear_acceleration>
