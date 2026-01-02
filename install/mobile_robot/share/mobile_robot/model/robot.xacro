@@ -126,7 +126,7 @@
 
 <!-- INERTFACE FOR COMTROLS -->
 
-<xacro:include filename="${find mobile_robot}/model/robot.gazebo"/>
+<xacro:include filename="$(find mobile_robot)/model/robot.gazebo"/>
 
 <!-- FICTOUS LINK  -->
 <!-- DEFINING LINKS ANDS JOINTS -->
@@ -134,7 +134,7 @@
 <joint name = "body_link_joint" type = "fixed">
    <parent link = "base_footprint"/>
    <child link = "body_link"/>
-</joint>
+</joint> 
 
 <!-- BODY LINK OF ROBOT -->
 <link name = "body_link">
@@ -149,7 +149,7 @@
       <geometry>
          <box size = "${body_length} ${body_height} ${body_width}"/>
       </geometry>
-      <origin r py = "0 0 0" xyz="0 0 ${s1}" />
+      <origin rpy = "0 0 0" xyz="0 0 ${s1}" />
    </collision>
 
    <xacro:body_link_macro/>
