@@ -97,7 +97,7 @@
 <!-- BODY LINK -->
 <xacro:macro name = "body_link_macro">
    <inertial>
-   <origin xyz = " 0 0 ${s1}" rpy = "0 0 0"/>
+   <origin rpy = "0 0 0" xyz = " 0 0 ${s1}"/>
    <mass value = "${body_mass}"/>
    <inertia ixx ="${Ix_body}" ixy = "0.0" ixz ="0.0" iyy ="${Iy_body}" iyz = "0.0" izz= "${Iz_body}"/>
    </inertial>
@@ -107,7 +107,7 @@
 <!-- WHEEL LINK -->
 <xacro:macro name = "wheel_link_macro">
    <inertial>
-   <origin xyz = "0 0 0" rpy = " 1.570795 0 0"/>
+   <origin rpy = " 1.570795 0 0" xyz = "0 0 0" />
    <mass value = "${wheel_mass}"/>
    <inertia ixx ="${Ix_wheel}" ixy="0.0" ixz="0.0" iyy="${Iy_wheel}" iyz ="0.0" izz="${Iz_wheel}"/>
    </inertial>
@@ -117,7 +117,7 @@
 <!-- CASTOR LINK -->
 <xacro:macro name = "castor_link_macro">
    <inertial>
-   <origin xyz = "0 0 0" rpy = "0 0 0"/>
+   <origin rpy = "0 0 0" xyz = "0 0 0" />
    <mass value = "${castor_mass}"/>
    <inertia ixx = "${Ix_castor}" ixy= "0.0" ixz="0.0" iyy="${Iy_castor}" iyz="0.0" izz= "${Iz_castor}"/>
    </inertial>
@@ -126,11 +126,13 @@
 
 <!-- INERTFACE FOR COMTROLS -->
 
+<xacro:include filename="${find mobile_robot}/model/robot.gazebo"/>
+
 <!-- FICTOUS LINK  -->
 <!-- DEFINING LINKS ANDS JOINTS -->
-<link name  = "body_footprint"></link>
+<link name  = "base_footprint"></link>
 <joint name = "body_link_joint" type = "fixed">
-   <parent link = "body_footprint"/>
+   <parent link = "base_footprint"/>
    <child link = "body_link"/>
 </joint>
 
@@ -138,16 +140,16 @@
 <link name = "body_link">
    <visual>
       <geometry>
-         <box size = "${body_length} ${body_width} ${body_height}"/>
+         <box size = "${body_length} ${body_height} ${body_width}"/>
       </geometry>
-      <origin xyz="0 0 ${s1}" rpy = "0 0 0"/>   
+      <origin rpy = "0 0 0" xyz="0 0 ${s1}"/>   
    </visual>
 
    <collision>
       <geometry>
-         <box size = "${body_length} ${body_width} ${body_height}"/>
+         <box size = "${body_length} ${body_height} ${body_width}"/>
       </geometry>
-      <origin xyz="0 0 ${s1}" rpy = "0 0 0"/>
+      <origin r py = "0 0 0" xyz="0 0 ${s1}" />
    </collision>
 
    <xacro:body_link_macro/>

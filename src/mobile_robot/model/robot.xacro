@@ -149,7 +149,7 @@
       <geometry>
          <box size = "${body_length} ${body_height} ${body_width}"/>
       </geometry>
-      <origin r py = "0 0 0" xyz="0 0 ${s1}" />
+      <origin rpy = "0 0 0" xyz="0 0 ${s1}" />
    </collision>
 
    <xacro:body_link_macro/>
