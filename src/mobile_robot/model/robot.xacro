@@ -25,39 +25,39 @@
 
 <!-- other dimensions -->
 <xacro:property name = "s1" 
-   value = "${body_height/2 + radius}"/>
+   value = "${body_width/2 + radius}"/>
 <xacro:property name = "s2"
    value ="${radius*2}"/>
 <xacro:property name = "s3"
    value = "${radius*2}"/>
 <xacro:property name = "s4"
-   value ="${body_width/2 + width/2}"/>
+   value ="${body_height/2 + width/2}"/>
 
 <!-- MASS NAD INERTIA -->
 
 <!-- DENSITY -->
 <!-- BODY LINK -->
-<xacro:property name = "body_link" 
+<xacro:property name = "body" 
    value = "2710.0"/>
 <!-- WHEEL LINK -->
-<xacro:property name = "wheel_link" 
+<xacro:property name = "wheel" 
    value = "2710.0"/>
 <!-- CASTOR LINK -->
-<xacro:property name = "castor_link"
+<xacro:property name = "castor"
    value = "2710.0"/>
 
 <!-- MASS -->
 <!-- BODY LINK MASS -->
 <xacro:property name = "body_mass"
-   value = "${body_link*body_length*body_width*body_height}"/>
+   value = "${body*body_length*body_width*body_height}"/>
 
 <!-- WHEEL LINK MASS -->
 <xacro:property name = "wheel_mass"
-   value = "${wheel_link*ohm*radius*radius*width}"/>
+   value = "${wheel*ohm*radius*radius*width}"/>
 
 <!-- CASTOR LINK MASS -->
 <xacro:property name = "castor_mass"
-   value = "${castor_link*(4/3)*ohm*radius*radius*radius}"/>
+   value = "${castor*(4.0/3.0)*ohm*radius*radius*radius}"/>
 
 <!--MOMENT OF INERTIA -->
 
@@ -71,22 +71,21 @@
 
 <!-- WHEEL LINK MOMENT OF INERTIA -->
 <xacro:property name="Ix_wheel"
-   value="${(1/12)*wheel_mass*(3*radius*radius + width*width)}"/>
+   value="${(1.0/12.0)*wheel_mass*(3*radius*radius + width*width)}"/>
 
 <xacro:property name="Iy_wheel"
-   value="${(1/2)*wheel_mass*radius*radius}"/>
+   value="${(1.0/12.0)*wheel_mass*(3*radius*radius + width*width)}"/>
 
 <xacro:property name="Iz_wheel"
-   value="${(1/12)*wheel_mass*(3*radius*radius + width*width)}"/>
-
+   value="${(0.5)*wheel_mass*radius*radius}"/>
 
 <!-- CASTOR LINK MOMENT OF INERTIA -->
 <xacro:property name = "Ix_castor"
-   value = "${(2/5)*castor_mass*radius*radius}" />
+   value = "${(2.0/5.0)*castor_mass*radius*radius}" />
 <xacro:property name = "Iy_castor"
-   value = "${(2/5)*castor_mass*radius*radius}" />
+   value = "${(2.0/5.0)*castor_mass*radius*radius}" />
 <xacro:property name = "Iz_castor"
-   value = "${(2/5)*castor_mass*radius*radius}" />
+   value = "${(2.0/5.0)*castor_mass*radius*radius}" />
 
 <!-- complete inertial system of the body -->
 <!-- FILE THAT INCLUDES GAZEBO OPTIONS AND MOTION CONTROLS-->
