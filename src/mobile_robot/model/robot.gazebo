@@ -29,20 +29,20 @@
 <gazebo>
     <plugin filename = "gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
 
-        <right_joint>wheel1_joint</right_joint>
-        <left_joint>wheel2_joint</left_joint>
+        <left_joint>wheel1_joint</left_joint>
+        <right_joint>wheel2_joint</right_joint>
 
         <wheel_separation>${2*s4}</wheel_separation>
         <wheel_diameter>${2*radius}</wheel_diameter>
 
-        <max-linear_acceleration>10.0</max-linear_acceleration>
+        <max_linear_acceleration>10.0</max_linear_acceleration>
 
         <topic>cmd_vel</topic>
         <tf_topic>/tf</tf_topic>
         <odom_topic>odom</odom_topic>
         <frame_id>odom</frame_id>
         <child_frame_id>base_footprint</child_frame_id>
-        <odom_publisher_ftrequency>30</odom_publisher_ftrequency>
+        <odom_publisher_frequency>30</odom_publisher_frequency>
     </plugin>
 
     <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
