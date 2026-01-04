@@ -67,6 +67,43 @@
 
 <xacro:include filename ="$(find mobile_robot)/model/robot.gazebo"/>
 
+<!-- ================= INERTIAL MACROS ================= -->
+
+<!-- BODY LINK -->
+<xacro:macro name="body_link_macro">
+  <inertial>
+    <origin xyz="0 0 ${s1}"/>
+    <mass value="${body_mass}"/>
+    <inertia
+      ixx="${Ix_body}" ixy="0" ixz="0"
+      iyy="${Iy_body}" iyz="0"
+      izz="${Iz_body}"/>
+  </inertial>
+</xacro:macro>
+
+<!-- WHEEL LINK -->
+<xacro:macro name="wheel_link_macro">
+  <inertial>
+    <mass value="${wheel_mass}"/>
+    <inertia
+      ixx="${Ix_wheel}" ixy="0" ixz="0"
+      iyy="${Iy_wheel}" iyz="0"
+      izz="${Iz_wheel}"/>
+  </inertial>
+</xacro:macro>
+
+<!-- CASTER LINK -->
+<xacro:macro name="castor_link_macro">
+  <inertial>
+    <mass value="${castor_mass}"/>
+    <inertia
+      ixx="${Ix_castor}" ixy="0" ixz="0"
+      iyy="${Iy_castor}" iyz="0"
+      izz="${Iz_castor}"/>
+  </inertial>
+</xacro:macro>
+
+
 <!-- BASE -->
 <link name="base_footprint"/>
 
