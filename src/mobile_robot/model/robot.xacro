@@ -134,6 +134,7 @@
 <joint name = "body_link_joint" type = "fixed">
    <parent link = "base_footprint"/>
    <child link = "body_link"/>
+   <origin xyz= "0 0 0"/>
 </joint> 
 
 <!-- BODY LINK OF ROBOT -->
