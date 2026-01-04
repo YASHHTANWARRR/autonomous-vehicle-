@@ -209,7 +209,7 @@
 </link>
 
 <!-- CASTOR JOINT -->
-<joint name="caster_joint" type ="continuous">
+<joint name="caster_joint" type ="fixed">
    <parent link = "body_link"/>
    <child link = "caster_link"/>
    <origin xyz= " ${body_length/2 - radius} 0 ${radius}" rpy="0 0 0"/>

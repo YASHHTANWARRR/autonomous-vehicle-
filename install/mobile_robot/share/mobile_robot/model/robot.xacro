@@ -124,10 +124,6 @@
 </xacro:macro>
 
 
-<!-- INERTFACE FOR COMTROLS -->
-
-<xacro:include filename="$(find mobile_robot)/model/robot.gazebo"/>
-
 <!-- FICTOUS LINK  -->
 <!-- DEFINING LINKS ANDS JOINTS -->
 <link name  = "base_footprint"></link>
@@ -162,7 +158,7 @@
    <parent link = "body_link"/>
    <child link = "wheel1_link"/>
    <origin xyz= " ${-s2} ${-s4} ${radius}" rpy="0 0 0"/>
-   <axis xyz= "0 1 0"/>
+   <axis xyz= "0 0 1"/>
    <limit effort = "100000" velocity= "10"/>
    <dynamics damping ="1.0" friction ="1.0"/>
 </joint>
@@ -189,7 +185,7 @@
    <parent link = "body_link"/>
    <child link = "wheel2_link"/>
    <origin xyz= " ${-s2} ${s4} ${radius}" rpy="0 0 0"/>
-   <axis xyz= "0 1 0"/>
+   <axis xyz= "0 0 1"/>
    <limit effort = "100000" velocity= "10"/>
    <dynamics damping ="1.0" friction ="1.0"/>
 </joint>
