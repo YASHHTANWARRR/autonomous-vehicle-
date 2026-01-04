@@ -9,14 +9,14 @@
 </gazebo>
 
 <gazebo reference = "wheel1_link">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
     <material>Gazebo/Yellow</material>
 </gazebo>
 
 <gazebo reference = "wheel2_link">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
     <material>Gazebo/Yellow</material>
 </gazebo>
 
@@ -27,7 +27,7 @@
 </gazebo>
 
 <gazebo>
-    <plugin filename = "gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+<plugin filename = "gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
 
         <left_joint>wheel1_joint</left_joint>
         <right_joint>wheel2_joint</right_joint>
