@@ -1894,7 +1894,7 @@
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/log/latest/logger_all.log
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/log/latest_build/events.log
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/log/latest_build/logger_all.log
-/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/robot.gazebo
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/robot.gazebo.xacro
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/robot.xacro
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/parameters/bridge_parameters.yaml
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/ament_index/resource_index/package_run_dependencies/mobile_robot
