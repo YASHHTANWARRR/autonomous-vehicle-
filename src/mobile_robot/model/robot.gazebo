@@ -27,7 +27,7 @@
 </gazebo>
 
 <gazebo>
-<plugin filename = "gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+    <plugin filename = "gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
 
         <left_joint>wheel1_joint</left_joint>
         <right_joint>wheel2_joint</right_joint>
@@ -35,7 +35,8 @@
         <wheel_separation>${2*s4}</wheel_separation>
         <wheel_diameter>${2*radius}</wheel_diameter>
 
-        <max_linear_acceleration>10.0</max_linear_acceleration>
+        <max_wheel_torque>100</max_wheel_torque>
+        <max_wheel_acceleration>10.0</max_wheel_acceleration>
 
         <topic>cmd_vel</topic>
         <tf_topic>/tf</tf_topic>
