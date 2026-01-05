@@ -158,7 +158,7 @@
 <joint name="wheel1_joint" type ="continuous">
    <parent link = "body_link"/>
    <child link = "wheel1_link"/>
-   <origin xyz= " ${-s2} ${-s4} ${radius}" rpy="0 0 0"/>
+   <origin xyz= " ${-s2} ${-s4} 0" rpy="0 0 0"/>
    <axis xyz= "0 1 0"/>
    <limit effort = "100000" velocity= "10"/>
    <dynamics damping ="1.0" friction ="1.0"/>
@@ -185,7 +185,7 @@
 <joint name="wheel2_joint" type ="continuous">
    <parent link = "body_link"/>
    <child link = "wheel2_link"/>
-   <origin xyz= " ${-s2} ${s4} ${radius}" rpy="0 0 0"/>
+   <origin xyz= " ${-s2} ${s4} 0" rpy="0 0 0"/>
    <axis xyz= "0 1 0"/>
    <limit effort = "100000" velocity= "10"/>
    <dynamics damping ="1.0" friction ="1.0"/>
@@ -210,10 +210,10 @@
 </link>
 
 <!-- CASTOR JOINT -->
-<joint name="caster_joint" type ="continuous">
+<joint name="caster_joint" type ="fixed">
    <parent link = "body_link"/>
    <child link = "caster_link"/>
-   <origin xyz= " ${body_length/2 - radius} 0 ${radius}" rpy="0 0 0"/>
+   <origin xyz= " ${body_length/2 - radius} 0 0" rpy="0 0 0"/>
    <axis xyz= "0 1 0"/>
    <limit effort = "100000" velocity= "10"/>
    <dynamics damping ="1.0" friction ="1.0"/>
