@@ -37,13 +37,13 @@
 <!-- DENSITY -->
 <!-- BODY LINK -->
 <xacro:property name = "body_link" 
-   value = "2710.0"/>
+   value = "500.0"/>
 <!-- WHEEL LINK -->
 <xacro:property name = "wheel_link" 
-   value = "2710.0"/>
+   value = "500.0"/>
 <!-- CASTOR LINK -->
 <xacro:property name = "castor_link"
-   value = "2710.0"/>
+   value = "500.0"/>
 
 <!-- MASS -->
 <!-- BODY LINK MASS -->
