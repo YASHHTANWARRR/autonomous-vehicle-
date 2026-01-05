@@ -188,7 +188,7 @@
 <joint name="caster_joint" type="fixed">
   <parent link="body_link"/>
   <child link="caster_link"/>
-  <origin xyz="${body_length/2 - radius} 0 ${radius}"/>
+  <origin xyz="${s1} 0 ${radius}"/>
 </joint>
 
 <link name="caster_link">
