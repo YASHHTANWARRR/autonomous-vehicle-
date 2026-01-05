@@ -140,14 +140,14 @@
       <geometry>
          <box size = "${body_length} ${body_width} ${body_height}"/>
       </geometry>
-      <origin xyz="0 0 ${s1}" rpy = "0 0 0"/>   
+      <origin xyz="0 0 ${radius}" rpy = "0 0 0"/>   
    </visual>
 
    <collision>
       <geometry>
          <box size = "${body_length} ${body_width} ${body_height}"/>
       </geometry>
-      <origin xyz="0 0 ${s1}" rpy = "0 0 0"/>
+      <origin xyz="0 0 ${radius}" rpy = "0 0 0"/>
    </collision>
 
    <xacro:body_link_macro/>
