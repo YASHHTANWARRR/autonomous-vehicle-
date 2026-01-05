@@ -97,7 +97,7 @@
 <!-- BODY LINK -->
 <xacro:macro name = "body_link_macro">
    <inertial>
-   <origin xyz = " 0 0 ${s1}" rpy = "0 0 0"/>
+   <origin xyz = " 0 0 ${radius}" rpy = "0 0 0"/>
    <mass value = "${body_mass}"/>
    <inertia ixx ="${Ix_body}" ixy = "0.0" ixz ="0.0" iyy ="${Iy_body}" iyz = "0.0" izz= "${Iz_body}"/>
    </inertial>
@@ -117,7 +117,7 @@
 <!-- CASTOR LINK -->
 <xacro:macro name = "castor_link_macro">
    <inertial>
-   <origin xyz = "0 0 0" rpy = "0 0 0"/>
+   <origin xyz = "0 0 0" rpy = "1.57095 0 0"/>
    <mass value = "${castor_mass}"/>
    <inertia ixx = "${Ix_castor}" ixy= "0.0" ixz="0.0" iyy="${Iy_castor}" iyz="0.0" izz= "${Iz_castor}"/>
    </inertial>
