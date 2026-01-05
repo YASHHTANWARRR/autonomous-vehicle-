@@ -18,15 +18,18 @@
 <xacro:property name="radius" value="0.15"/>
 <xacro:property name="width"  value="0.1"/>
 
-<!-- ================= GEOMETRIC OFFSETS (MATCH DIAGRAM) ====== -->
+<!-- ========================================================= -->
+<!-- ========== GEOMETRIC OFFSETS (MATCH DIAGRAM) ============= -->
+<!-- ========================================================= -->
 
 <!-- vertical -->
 <xacro:property name="z_wheel" value="${radius}"/>
 <xacro:property name="z_body"  value="${radius + body_height/2}"/>
 
 <!-- longitudinal -->
-<xacro:property name="x_wheel"  value="${-body_length/2 + radius}"/>
+<!-- caster is at FRONT (+X), wheels are behind -->
 <xacro:property name="x_caster" value="${ body_length/2 - radius}"/>
+<xacro:property name="x_wheel"  value="${-body_length/2 + radius}"/>
 
 <!-- lateral -->
 <xacro:property name="y_wheel" value="${body_width/2 + width/2}"/>
@@ -191,7 +194,7 @@
 </link>
 
 <!-- ========================================================= -->
-<!-- ====================== CASTER =========================== -->
+<!-- ====================== FRONT CASTER ==================== -->
 <!-- ========================================================= -->
 
 <joint name="caster_joint" type="fixed">
@@ -203,14 +206,16 @@
 <link name="caster_link">
   <visual>
     <geometry>
-      <cylinder radius="0.05" length="0.02"/>
+      <geometry>
+        <sphere radius="${radius}"/>
+      </geometry> 
     </geometry>
     <origin rpy="1.5708 0 0"/>
   </visual>
 
   <collision>
     <geometry>
-      <cylinder radius="0.05" length="0.02"/>
+        <sphere radius="${radius}"/>
     </geometry>
     <origin rpy="1.5708 0 0"/>
   </collision>
