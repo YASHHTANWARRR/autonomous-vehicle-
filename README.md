@@ -30,8 +30,8 @@ Make sure you have correct sdf format which can be checked by creating an empty 
 
 
 First Lidar simulation
-<img width="780" height="509" alt="image" src="https://github.com/user-attachments/assets/c9254025-af2b-4171-87cc-d64844977683" />
 
+<img width="780" height="509" alt="image" src="https://github.com/user-attachments/assets/c9254025-af2b-4171-87cc-d64844977683" />
 <img width="780" height="509" alt="image" src="https://github.com/user-attachments/assets/9fca9af0-8968-437b-843b-ba669d11e926" />
 
 Always make sure your bridging parameters works well otherwise faults will keep on generating 
