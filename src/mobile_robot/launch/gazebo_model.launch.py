@@ -79,6 +79,7 @@ def generate_launch_description():
             '--params-file',
             bridge_params,
         ],
+        parameters=[{'use_sim_time': True}], 
         output='screen',
     )
     
