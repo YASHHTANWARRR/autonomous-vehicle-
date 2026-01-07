@@ -27,3 +27,12 @@ ros2 run ros_gz_bridge parameter_bridge \
 Adding any sensor
 
 Make sure you have correct sdf format which can be checked by creating an empty world (with .sdf extension)and then opening it. What this does is that it helps in understanding how different sensors like a lidar,cameraetc have to integrated in the xml file for us 
+
+
+First Lidar simulation
+<img width="1442" height="999" alt="image" src="https://github.com/user-attachments/assets/90dfcccb-ae05-4da4-84a0-419c9046a649" />
+<img width="780" height="509" alt="image" src="https://github.com/user-attachments/assets/9fca9af0-8968-437b-843b-ba669d11e926" />
+
+Always make sure your bridging parameters works well otherwise faults will keep on generating 
+
+
