@@ -71,11 +71,11 @@ def generate_launch_description():
     )
 
     # bridge parameters file
-    bridge_params = os.path.join(
-        get_package_share_directory(namePackage),
-        'parameters',
-        'bridge_params.yaml'
-    )
+    params_file = os.path.join(
+    get_package_share_directory('mobile_robot'),
+    'parameters',
+    'bridge_params.yaml'
+    )   
 
     # Gazebo ↔ ROS bridge
     start_gazebo_ros_bridge_cmd = Node(
