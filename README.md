@@ -22,3 +22,8 @@ always remember to bridge ros2 and gazebo with this command
 
 ros2 run ros_gz_bridge parameter_bridge \
 /cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
+
+
+Adding any sensor
+
+Make sure you have correct sdf format which can be checked by creating an empty world (with .sdf extension)and then opening it. What this does is that it helps in understanding how different sensors like a lidar,cameraetc have to integrated in the xml file for us 
