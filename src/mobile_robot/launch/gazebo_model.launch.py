@@ -75,10 +75,11 @@ def generate_launch_description():
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=[
-            '--ros_args',
-            '-p',
-            f'config_file:={bridge_params}',
+            '--ros-args',
+            '--params-file',
+            bridge_params,
         ],
+        parameters=[{'use_sim_time': True}], 
         output='screen',
     )
     
