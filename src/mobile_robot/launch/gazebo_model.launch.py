@@ -81,7 +81,13 @@ def generate_launch_description():
     start_gazebo_ros_bridge_cmd = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        parameters=[bridge_params],
+        parameters=[
+            os.path.join(
+                get_package_share_directory('mobile_robot'),
+                'parameters',
+                'bridge_params.yaml'
+            )
+        ],
         output='screen',
     )
 

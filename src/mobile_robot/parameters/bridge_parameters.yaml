@@ -28,7 +28,7 @@
 
 # LiDAR
 - ros_topic_name: "/scan"
-  gz_topic_name: "/world/empty/model/castor_robot/link/lidar_link/sensor/gpu_lidar/scan"
+  gz_topic_name: "/scan"
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "gz.msgs.LaserScan"
   direction: "GZ_TO_ROS"
