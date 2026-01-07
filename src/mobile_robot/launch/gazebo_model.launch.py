@@ -81,14 +81,10 @@ def generate_launch_description():
     start_gazebo_ros_bridge_cmd = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
-        arguments=[
-            '--ros-args',
-            '--params-file',
-            bridge_params
-        ],
-        parameters=[{'use_sim_time': True}],
+        parameters=[bridge_params],
         output='screen',
     )
+
 
     # launch description
     LaunchDescriptionObject = LaunchDescription()

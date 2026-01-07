@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="https://www.ros.org/wiki/xacro">
 
-<gazebo>
+<!-- <gazebo>
     <model>
         <canonical_link>body_link</canonical_link>
     </model>
-</gazebo>
+</gazebo> -->
 
 <gazebo reference = "body_link">
     <mu1>0.2</mu1>
