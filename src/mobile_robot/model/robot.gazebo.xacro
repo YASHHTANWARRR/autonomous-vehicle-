@@ -61,7 +61,7 @@
 
 <!-- LiDAR sensor -->
 <gazebo reference="lidar_link">
-    <sensor name="gpu_lidar" type="gpu_lidar">
+    <sensor name="gpu_lidar" type="ray">
     <pose relative_to="lidar_link">0 0 0 0 0 0</pose>
 
     <topic>scan</topic>
