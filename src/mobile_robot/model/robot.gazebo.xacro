@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="https://www.ros.org/wiki/xacro">
 
+<gazebo>
+    <model>
+        <canonical_link>body_link</canonical_link>
+    </model>
+</gazebo>
+
 <gazebo reference = "body_link">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
@@ -61,16 +67,17 @@
 
 <!-- LiDAR sensor -->
 <gazebo reference="lidar_link">
-    <sensor name="gpu_lidar" type="gpu_ray">
-        <ray>
+    <sensor name="gpu_lidar" type="gpu_lidar">
+        <!-- <ray>
             <collision>
                 <ignore_entity>castor_robot</ignore_entity>
             </collision>
-        </ray>
+        </ray> -->
         
     <pose relative_to="lidar_link">0 0 0 0 0 0</pose>
+    
+    <topic>scan</topic>
 
-    <topic>/world/default/model/castor_robot/link/lidar_link/sensor/gpu_lidar/scan</topic>
     <update_rate>10</update_rate>
 
     <lidar>
@@ -98,6 +105,7 @@
 
     <always_on>true</always_on>
     <visualize>true</visualize>
+
     </sensor>
 </gazebo>
 

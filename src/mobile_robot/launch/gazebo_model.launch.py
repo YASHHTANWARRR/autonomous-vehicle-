@@ -83,6 +83,17 @@ def generate_launch_description():
         output='screen',
     )
     
+    Node(
+    package='ros_gz_bridge',
+    executable='parameter_bridge',
+    arguments=[
+        '--ros-args',
+        '--params-file',
+        bridge_params
+    ],
+    output='screen',
+)
+    
     #creating an empty launch description object
     LaunchDescriptionObject=LaunchDescription()
     
