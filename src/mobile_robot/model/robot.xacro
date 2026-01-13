@@ -95,13 +95,13 @@
 
 <!-- THE BASIC COORDINATE SYSTEM IS CENTERED AT THE GEOMETRIC CENTER OF THE BODY LINK -->
 
-<!--dummy link for gazebo -->
+<!-- dummy link for gazebo
 <link name="dummy">
 </link>
 <joint name="dummy_joint" type="fixed">
    <parent link="dummy"/>
    <child link="body_link"/>
-</joint>
+</joint> -->
 
 <!-- BODY LINK -->
 <xacro:macro name = "body_link_macro">
@@ -116,7 +116,7 @@
 <!-- WHEEL LINK -->
 <xacro:macro name = "wheel_link_macro">
    <inertial>
-   <origin xyz = "0 0 0" rpy = " 1.570795 0 0"/>
+   <origin xyz = "0 0 0" rpy = "0 0 0"/>
    <mass value = "${wheel_mass}"/>
    <inertia ixx ="${Ix_wheel}" ixy="0.0" ixz="0.0" iyy="${Iy_wheel}" iyz ="0.0" izz="${Iz_wheel}"/>
    </inertial>
