@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<robot name = "castor_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name = "diff_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <!-- define constants -->
 
 <xacro:property name = "ohm" value ="3.14159"/>
@@ -21,6 +21,8 @@
 <!-- WIDTH  WHEEL -->
 <xacro:property name ="width" 
    value ="0.10"/>
+<xacro:property name ="wheel_z_location"
+   value ="-0.1"/>
 
 <!-- other dimensions -->
 <xacro:property name = "s1" 
@@ -41,9 +43,9 @@
 <!-- WHEEL LINK -->
 <xacro:property name = "wheel_link" 
    value = "500.0"/>
-<!-- CASTOR LINK -->
+<!-- CASTOR LINK
 <xacro:property name = "castor_link"
-   value = "500.0"/>
+   value = "500.0"/> -->
 
 <!-- MASS -->
 <!-- BODY LINK MASS -->
@@ -54,9 +56,9 @@
 <xacro:property name = "wheel_mass"
    value = "${wheel_link*ohm*radius*radius*width}"/>
 
-<!-- CASTOR LINK MASS -->
+<!-- CASTOR LINK MASS
 <xacro:property name = "castor_mass"
-   value = "${castor_link*(4/3)*ohm*radius*radius*radius}"/>
+   value = "${castor_link*(4/3)*ohm*radius*radius*radius}"/> -->
 
 <!--MOMENT OF INERTIA -->
 
@@ -79,13 +81,13 @@
    value="${(1/12)*wheel_mass*(3*radius*radius + width*width)}"/>
 
 
-<!-- CASTOR LINK MOMENT OF INERTIA -->
+<!-- CASTOR LINK MOMENT OF INERTIA
 <xacro:property name = "Ix_castor"
    value = "${(2/5)*castor_mass*radius*radius}" />
 <xacro:property name = "Iy_castor"
    value = "${(2/5)*castor_mass*radius*radius}" />
 <xacro:property name = "Iz_castor"
-   value = "${(2/5)*castor_mass*radius*radius}" />
+   value = "${(2/5)*castor_mass*radius*radius}" /> -->
 
 <!-- complete inertial system of the body -->
 <!-- FILE THAT INCLUDES GAZEBO OPTIONS AND MOTION CONTROLS-->
@@ -93,6 +95,13 @@
 
 <!-- THE BASIC COORDINATE SYSTEM IS CENTERED AT THE GEOMETRIC CENTER OF THE BODY LINK -->
 
+<!--dummy link for gazebo -->
+<link name="dummy">
+</link>
+<joint name="dummy_joint" type="fixed">
+   <parent link="dummy"/>
+   <child link="body_link"/>
+</joint>
 
 <!-- BODY LINK -->
 <xacro:macro name = "body_link_macro">
@@ -114,14 +123,14 @@
 </xacro:macro>
 
 
-<!-- CASTOR LINK -->
+<!-- CASTOR LINK
 <xacro:macro name = "castor_link_macro">
    <inertial>
    <origin xyz = "0 0 0" rpy = "1.57095 0 0"/>
    <mass value = "${castor_mass}"/>
    <inertia ixx = "${Ix_castor}" ixy= "0.0" ixz="0.0" iyy="${Iy_castor}" iyz="0.0" izz= "${Iz_castor}"/>
    </inertial>
-</xacro:macro>
+</xacro:macro> -->
 
 
 <!-- INERTFACE FOR COMTROLS -->
@@ -209,7 +218,34 @@
    <xacro:wheel_link_macro/>
 </link>
 
-<!-- CASTOR JOINT -->
+<joint name="wheel3_joint" type ="continous">
+   <parent link="body_link"/>
+   <child link="wheel3_link"/>
+   <origin xyz="${s2} ${-s4} 0" rpy="0 0 0"/>
+   <axis xyz= "0 1 0"/>
+   <limit effort = "100000" velocity= "10"/>
+   <dynamics damping ="1.0" friction ="1.0"/>
+</joint>
+
+<link name = "wheel3_link"/>
+   <visual>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </visual>   
+
+   <collision>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </collision>
+
+   <xacro:wheel_link_macro/>
+</link>
+
+<!-- CASTOR JOINT
 <joint name="caster_joint" type ="continuous">
    <parent link = "body_link"/>
    <child link = "caster_link"/>
@@ -235,7 +271,7 @@
    </collision>
 
    <xacro:castor_link_macro/>
-</link>  
+</link>   -->
 
 <!-- LIDAR -->
 
