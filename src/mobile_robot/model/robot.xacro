@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<robot name = "diff_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name = "castor_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <!-- define constants -->
 
 <xacro:property name = "ohm" value ="3.14159"/>
@@ -218,14 +218,7 @@
    <xacro:wheel_link_macro/>
 </link>
 
-<joint name="wheel3_joint" type ="continuous">
-   <parent link="body_link"/>
-   <child link="wheel3_link"/>
-   <origin xyz="${s2} ${-s4} 0" rpy="0 0 0"/>
-   <axis xyz= "0 1 0"/>
-   <limit effort = "100000" velocity= "10"/>
-   <dynamics damping ="1.0" friction ="1.0"/>
-</joint>
+
 <joint name="wheel3_joint" type="continuous">
    <parent link="body_link"/>
    <child link="wheel3_link"/>
