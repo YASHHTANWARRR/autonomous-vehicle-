@@ -241,9 +241,10 @@
       </geometry>
       <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
    </collision>
-
    <xacro:wheel_link_macro/>
 </link>
+
+
 <joint name="wheel4_joint" type ="continous">
    <parent link="body_link"/>
    <child link="wheel3_link"/>
