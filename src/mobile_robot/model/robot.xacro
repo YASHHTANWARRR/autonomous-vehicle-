@@ -244,6 +244,32 @@
 
    <xacro:wheel_link_macro/>
 </link>
+<joint name="wheel4_joint" type ="continous">
+   <parent link="body_link"/>
+   <child link="wheel3_link"/>
+   <origin xyz="${s2} ${s4} 0" rpy="0 0 0"/>
+   <axis xyz= "0 1 0"/>
+   <limit effort = "100000" velocity= "10"/>
+   <dynamics damping ="1.0" friction ="1.0"/>
+</joint>
+
+<link name = "wheel4_link"/>
+   <visual>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </visual>   
+
+   <collision>
+      <geometry>
+         <cylinder length = "${width}" radius = "${radius}"/>
+      </geometry>
+      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+   </collision>
+
+   <xacro:wheel_link_macro/>
+</link>
 
 <!-- CASTOR JOINT
 <joint name="caster_joint" type ="continuous">
