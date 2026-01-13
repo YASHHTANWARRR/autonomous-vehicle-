@@ -37,3 +37,9 @@ First Lidar simulation
 Always make sure your bridging parameters works well otherwise faults will keep on generating 
 
 
+NEW DESIGN FOR THE ROBOT
+
+S<img width="578" height="500" alt="image" src="https://github.com/user-attachments/assets/38b8704b-876e-479e-bc6e-6ce82d6cd461" />
+
+
+
