@@ -25,11 +25,23 @@
     <material>Gazebo/Yellow</material>
 </gazebo>
 
-<gazebo reference = "caster_link">
+<gazebo reference = "wheel3_link">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <material>Gazebo/Yellow</material>
+</gazebo
+>
+<gazebo reference = "wheel4_link">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <material>Gazebo/Yellow</material>
+</gazebo>
+
+<!-- <gazebo reference = "caster_link">
     <mu1>0.00002</mu1>
     <mu2>0.00002</mu2>
     <material>Gazebo/Blue</material>
-</gazebo>
+</gazebo> -->
 
 <gazebo>
     <plugin filename = "libgz-sim-diff-drive-system.so" name="gz::sim::systems::DiffDrive">
