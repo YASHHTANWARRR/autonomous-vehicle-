@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<robot name = "diff_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name = "castor_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <!-- define constants -->
 
 <xacro:property name = "ohm" value ="3.14159"/>
@@ -95,13 +95,13 @@
 
 <!-- THE BASIC COORDINATE SYSTEM IS CENTERED AT THE GEOMETRIC CENTER OF THE BODY LINK -->
 
-<!--dummy link for gazebo -->
+<!-- dummy link for gazebo
 <link name="dummy">
 </link>
 <joint name="dummy_joint" type="fixed">
    <parent link="dummy"/>
    <child link="body_link"/>
-</joint>
+</joint> -->
 
 <!-- BODY LINK -->
 <xacro:macro name = "body_link_macro">
@@ -116,7 +116,7 @@
 <!-- WHEEL LINK -->
 <xacro:macro name = "wheel_link_macro">
    <inertial>
-   <origin xyz = "0 0 0" rpy = " 1.570795 0 0"/>
+   <origin xyz = "0 0 0" rpy = "0 0 0"/>
    <mass value = "${wheel_mass}"/>
    <inertia ixx ="${Ix_wheel}" ixy="0.0" ixz="0.0" iyy="${Iy_wheel}" iyz ="0.0" izz="${Iz_wheel}"/>
    </inertial>
@@ -200,7 +200,7 @@
    <dynamics damping ="1.0" friction ="1.0"/>
 </joint>
 
-<link name = "wheel2_link">
+<link name ="wheel2_link">
    <visual>
       <geometry>
          <cylinder length = "${width}" radius = "${radius}"/>
@@ -218,59 +218,57 @@
    <xacro:wheel_link_macro/>
 </link>
 
-<joint name="wheel3_joint" type ="continous">
+
+<joint name="wheel3_joint" type="continuous">
    <parent link="body_link"/>
    <child link="wheel3_link"/>
    <origin xyz="${s2} ${-s4} 0" rpy="0 0 0"/>
-   <axis xyz= "0 1 0"/>
-   <limit effort = "100000" velocity= "10"/>
-   <dynamics damping ="1.0" friction ="1.0"/>
+   <axis xyz="0 1 0"/>
+   <limit effort="100000" velocity="10"/>
+   <dynamics damping="1.0" friction="1.0"/>
 </joint>
 
-<link name = "wheel3_link"/>
+<link name="wheel3_link">
    <visual>
       <geometry>
-         <cylinder length = "${width}" radius = "${radius}"/>
+         <cylinder length="${width}" radius="${radius}"/>
       </geometry>
-      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
-   </visual>   
-
+      <origin xyz="0 0 0" rpy="1.570795 0 0"/>
+   </visual>
    <collision>
       <geometry>
-         <cylinder length = "${width}" radius = "${radius}"/>
+         <cylinder length="${width}" radius="${radius}"/>
       </geometry>
-      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+      <origin xyz="0 0 0" rpy="1.570795 0 0"/>
    </collision>
    <xacro:wheel_link_macro/>
 </link>
 
-
-<joint name="wheel4_joint" type ="continous">
+<joint name="wheel4_joint" type="continuous">
    <parent link="body_link"/>
-   <child link="wheel3_link"/>
+   <child link="wheel4_link"/>
    <origin xyz="${s2} ${s4} 0" rpy="0 0 0"/>
-   <axis xyz= "0 1 0"/>
-   <limit effort = "100000" velocity= "10"/>
-   <dynamics damping ="1.0" friction ="1.0"/>
+   <axis xyz="0 1 0"/>
+   <limit effort="100000" velocity="10"/>
+   <dynamics damping="1.0" friction="1.0"/>
 </joint>
 
-<link name = "wheel4_link"/>
+<link name="wheel4_link">
    <visual>
       <geometry>
-         <cylinder length = "${width}" radius = "${radius}"/>
+         <cylinder length="${width}" radius="${radius}"/>
       </geometry>
-      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
-   </visual>   
-
+      <origin xyz="0 0 0" rpy="1.570795 0 0"/>
+   </visual>
    <collision>
       <geometry>
-         <cylinder length = "${width}" radius = "${radius}"/>
+         <cylinder length="${width}" radius="${radius}"/>
       </geometry>
-      <origin xyz = "0 0 0" rpy = "1.570795 0 0"/>
+      <origin xyz="0 0 0" rpy="1.570795 0 0"/>
    </collision>
-
    <xacro:wheel_link_macro/>
 </link>
+
 
 <!-- CASTOR JOINT
 <joint name="caster_joint" type ="continuous">
