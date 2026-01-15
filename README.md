@@ -44,6 +44,9 @@ S<img width="578" height="500" alt="image" src="https://github.com/user-attachme
 Implementation of new design
 <img width="975" height="439" alt="image" src="https://github.com/user-attachments/assets/5a2ee62a-d842-44ec-b9db-1db2aa5195fe" />
 
+NAVIGATION IMPLEMENTATION
+<img width="758" height="305" alt="image" src="https://github.com/user-attachments/assets/ecaf9916-6298-4f51-82b4-1a35e4c8ed36" />
+
 
 
 
