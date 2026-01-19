@@ -1,0 +1,18 @@
+<sdf version="1.9">
+  <world name="nav2_track">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://generated_walls</uri>
+    </include>
+
+  </world>
+</sdf>
+
