@@ -35,7 +35,7 @@
 
     <!-- Generated Track Walls -->
     <include>
-      <uri>model://generated_walls</uri>
+      <uri>file:///home/hornet/autonomous-vehicle-/src/mobile_robot/models/generated_walls/model.sdf</uri>
     </include>
 
   </world>
