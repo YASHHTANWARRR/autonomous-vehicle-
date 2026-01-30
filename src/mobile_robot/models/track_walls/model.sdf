@@ -1,0 +1,165 @@
+
+<?xml version="1.0" ?>
+<sdf version="1.7">
+    <model name="track_walls">
+        <static>true</static>
+
+        <!-- Wall parameters -->
+        <!-- length=0.8  thickness=0.2  height=1.0 -->
+
+        <!-- ================= OUTER WALL ================= -->
+
+        <link name="outer_1">
+        <pose>-20 0 0.5 0 0 0.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_2">
+        <pose>-17 -2 0.5 0 0 0.4</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_3">
+        <pose>-14 -5 0.5 0 0 0.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_4">
+        <pose>-10 -9 0.5 0 0 1.0</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_5">
+        <pose>-5 -14 0.5 0 0 1.4</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_6">
+        <pose>1 -18 0.5 0 0 1.8</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_7">
+        <pose>7 -20 0.5 0 0 2.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_8">
+        <pose>13 -21 0.5 0 0 2.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_9">
+        <pose>18 -18 0.5 0 0 3.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_10">
+        <pose>16 -12 0.5 0 0 3.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_11">
+        <pose>11 -7 0.5 0 0 4.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_12">
+        <pose>5 -3 0.5 0 0 4.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="outer_13">
+        <pose>-2 -1 0.5 0 0 5.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <!-- ================= INNER WALL ================= -->
+
+        <link name="inner_1">
+        <pose>-17 1 0.5 0 0 0.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_2">
+        <pose>-14 -1 0.5 0 0 0.4</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_3">
+        <pose>-11 -4 0.5 0 0 0.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_4">
+        <pose>-7 -8 0.5 0 0 1.0</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_5">
+        <pose>-3 -12 0.5 0 0 1.4</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_6">
+        <pose>2 -15 0.5 0 0 1.8</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_7">
+        <pose>7 -16 0.5 0 0 2.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_8">
+        <pose>12 -16 0.5 0 0 2.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_9">
+        <pose>14 -13 0.5 0 0 3.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_10">
+        <pose>12 -9 0.5 0 0 3.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_11">
+        <pose>8 -5 0.5 0 0 4.2</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+        <link name="inner_12">
+        <pose>3 -3 0.5 0 0 4.7</pose>
+        <collision name="c"><geometry><box><size>0.8 0.2 1</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>0.8 0.2 1</size></box></geometry></visual>
+        </link>
+
+    </model>
+</sdf>
