@@ -21,3 +21,25 @@ _,bw = cv2.threshold(img,200,255,cv2.THRESH_BINARY)
 
 # Invert image (Gazebo expects obstacles = black)
 bw = cv2.bitwise_not(bw)
+
+# Save processed map
+map_path = os.path.join(OUTPUT_DIR, f"{MAP_NAME}.png")
+cv2.imwrite(map_path, bw)
+
+# Create YAML file
+yaml_data = {
+    "image": f"{MAP_NAME}.png",
+    "resolution": RESOLUTION,
+    "origin": ORIGIN,
+    "negate": 0,
+    "occupied_thresh": 0.65,
+    "free_thresh": 0.2
+}
+
+yaml_path = os.path.join(OUTPUT_DIR, f"{MAP_NAME}.yaml")
+with open(yaml_path, "w") as f:
+    yaml.dump(yaml_data, f)
+
+print("✅ Gazebo map created!")
+print(f" - {map_path}")
+print(f" - {yaml_path}")
