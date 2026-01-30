@@ -1,18 +1,14 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.7">
-<include>
-    <uri>file://track_walls.sdf</uri>
-</include>
-
     <world name="image_world">
 
-        <!-- Light -->
+    <!-- Light -->
         <light name="sun" type="directional">
         <pose>0 0 10 0 0 0</pose>
         <direction>-0.5 0.5 -1</direction>
-        </light>
+    </light>
 
-        <!-- Ground -->
+    <!-- Ground -->
         <model name="ground">
         <static>true</static>
         <link name="link">
@@ -31,10 +27,10 @@
             </geometry>
             </visual>
         </link>
-        </model>
+    </model>
 
-        <!-- Track -->
-        <model name="track">
+    <!-- Track floor (optional visual) -->
+    <model name="track">
         <static>true</static>
         <link name="link">
             <visual name="visual">
@@ -46,6 +42,11 @@
             </visual>
         </link>
         </model>
+
+        <!-- Track walls -->
+        <include>
+        <uri>file://track_walls.sdf</uri>
+        </include>
 
     </world>
 </sdf>
