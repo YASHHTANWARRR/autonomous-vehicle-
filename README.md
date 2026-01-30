@@ -16,3 +16,39 @@ https://github.com/changh95/visual-slam-roadmap?tab=readme-ov-file
 BASIC ROBOT WITH CASTOR WHEEL GEOMETRY :
 <img width="664" height="778" alt="image" src="https://github.com/user-attachments/assets/927d64a4-8099-4be4-9fe6-5dad6aad7f5f" />
 
+always remember to bridge ros2 and gazebo with this command
+
+
+
+ros2 run ros_gz_bridge parameter_bridge \
+/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
+
+
+Adding any sensor
+
+Make sure you have correct sdf format which can be checked by creating an empty world (with .sdf extension)and then opening it. What this does is that it helps in understanding how different sensors like a lidar,cameraetc have to integrated in the xml file for us 
+
+
+First Lidar simulation
+
+<img width="780" height="509" alt="image" src="https://github.com/user-attachments/assets/c9254025-af2b-4171-87cc-d64844977683" />
+<img width="780" height="509" alt="image" src="https://github.com/user-attachments/assets/9fca9af0-8968-437b-843b-ba669d11e926" />
+
+Always make sure your bridging parameters works well otherwise faults will keep on generating 
+
+
+NEW DESIGN FOR THE ROBOT
+
+S<img width="578" height="500" alt="image" src="https://github.com/user-attachments/assets/38b8704b-876e-479e-bc6e-6ce82d6cd461" />
+
+Implementation of new design
+<img width="975" height="439" alt="image" src="https://github.com/user-attachments/assets/5a2ee62a-d842-44ec-b9db-1db2aa5195fe" />
+
+NAVIGATION IMPLEMENTATION
+
+
+<img width="758" height="305" alt="image" src="https://github.com/user-attachments/assets/ecaf9916-6298-4f51-82b4-1a35e4c8ed36" />
+
+
+
+
