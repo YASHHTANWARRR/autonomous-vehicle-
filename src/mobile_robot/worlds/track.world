@@ -1,17 +1,36 @@
 <?xml version="1.0" ?>
-<sdf version="1.6">
+<sdf version="1.7">
     <world name="image_world">
 
-        <include>
-        <uri>model://sun</uri>
-        </include>
+        <!-- Light -->
+        <light name="sun" type="directional">
+        <pose>0 0 10 0 0 0</pose>
+        <direction>-0.5 0.5 -1</direction>
+        </light>
 
-        <include>
-        <uri>model://ground_plane</uri>
-        </include>
+        <!-- Ground -->
+        <model name="ground">
+        <static>true</static>
+        <link name="link">
+            <collision name="collision">
+            <geometry>
+                <plane>
+                <size>50 50</size>
+                </plane>
+            </geometry>
+            </collision>
+            <visual name="visual">
+            <geometry>
+                <plane>
+                <size>50 50</size>
+                </plane>
+            </geometry>
+            </visual>
+        </link>
+        </model>
 
-        <!-- Map as a textured plane -->
-        <model name="map">
+        <!-- Track -->
+        <model name="track">
         <static>true</static>
         <link name="link">
             <visual name="visual">
@@ -20,12 +39,6 @@
                 <size>20 20</size>
                 </plane>
             </geometry>
-            <material>
-                <script>
-                <uri>file://media/materials/scripts/gazebo.material</uri>
-                <name>Gazebo/White</name>
-                </script>
-            </material>
             </visual>
         </link>
         </model>
