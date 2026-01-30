@@ -41,5 +41,14 @@ NEW DESIGN FOR THE ROBOT
 
 S<img width="578" height="500" alt="image" src="https://github.com/user-attachments/assets/38b8704b-876e-479e-bc6e-6ce82d6cd461" />
 
+Implementation of new design
+<img width="975" height="439" alt="image" src="https://github.com/user-attachments/assets/5a2ee62a-d842-44ec-b9db-1db2aa5195fe" />
+
+NAVIGATION IMPLEMENTATION
+
+
+<img width="758" height="305" alt="image" src="https://github.com/user-attachments/assets/ecaf9916-6298-4f51-82b4-1a35e4c8ed36" />
+
+
 
 
