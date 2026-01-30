@@ -27,8 +27,7 @@
             </plane>
           </geometry>
           <material>
-            <ambient>0.3 0.3 0.3 1</ambient>
-	<diffuse>0.6 0.6 0.6 1</diffuse>
+            <ambient>0.8 0.8 0.8 1</ambient>
           </material>
         </visual>
       </link>
@@ -40,9 +39,13 @@
     </include>
 	
 	<gui>
-		<camera name="user_camera">
-			<pose>0 -20 15 0.7 0 0</pose>
-		</camera>
-	</gui>
+  <camera name="user_camera">
+    <pose>0 -20 15 0.7 0 0</pose>
+  </camera>
+</gui>
   </world>
 </sdf>
+<material>
+  <ambient>0.3 0.3 0.3 1</ambient>
+  <diffuse>0.6 0.6 0.6 1</diffuse>
+</material>
