@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="image_world">
+
+        <include>
+        <uri>model://sun</uri>
+        </include>
+
+        <include>
+        <uri>model://ground_plane</uri>
+        </include>
+
+        <!-- Map as a textured plane -->
+        <model name="map">
+        <static>true</static>
+        <link name="link">
+            <visual name="visual">
+            <geometry>
+                <plane>
+                <size>20 20</size>
+                </plane>
+            </geometry>
+            <material>
+                <script>
+                <uri>file://media/materials/scripts/gazebo.material</uri>
+                <name>Gazebo/White</name>
+                </script>
+            </material>
+            </visual>
+        </link>
+        </model>
+
+    </world>
+</sdf>
