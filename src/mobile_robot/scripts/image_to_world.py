@@ -23,20 +23,20 @@ _,bw = cv2.threshold(img,200,255,cv2.THRESH_BINARY)
 bw = cv2.bitwise_not(bw)
 
 # Save processed map
-map_path = os.path.join(OUTPUT_DIR, f"{MAP_NAME}.png")
+map_path = os.path.join(out_path, f"{map_name}.png")
 cv2.imwrite(map_path, bw)
 
 # Create YAML file
 yaml_data = {
-    "image": f"{MAP_NAME}.png",
-    "resolution": RESOLUTION,
-    "origin": ORIGIN,
+    "image": f"{map_name}.png",
+    "resolution": resolution,
+    "origin": origin,
     "negate": 0,
     "occupied_thresh": 0.65,
     "free_thresh": 0.2
 }
 
-yaml_path = os.path.join(OUTPUT_DIR, f"{MAP_NAME}.yaml")
+yaml_path = os.path.join(out_path, f"{map_name}.yaml")
 with open(yaml_path, "w") as f:
     yaml.dump(yaml_data, f)
 
