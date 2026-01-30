@@ -50,5 +50,9 @@ NAVIGATION IMPLEMENTATION
 <img width="758" height="305" alt="image" src="https://github.com/user-attachments/assets/ecaf9916-6298-4f51-82b4-1a35e4c8ed36" />
 
 
+converted an image file to yaml file and then uplaod it to rviz2
+
+
+<img width="1202" height="804" alt="image" src="https://github.com/user-attachments/assets/7035b6e5-4d04-485d-ae07-32285bfe9c53" />
 
 
