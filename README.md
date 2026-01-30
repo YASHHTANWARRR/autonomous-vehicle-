@@ -55,4 +55,14 @@ converted an image file to yaml file and then uplaod it to rviz2
 
 <img width="1202" height="804" alt="image" src="https://github.com/user-attachments/assets/7035b6e5-4d04-485d-ae07-32285bfe9c53" />
 
+for generating the map 
+
+cd ~/autonomous-vehicle-/src/mobile_robot
+source install/setup.bash
+
+ros2 run nav2_map_server map_server \
+  --ros-args \
+  -p yaml_filename:=maps/test_track.yaml
+
+
 
