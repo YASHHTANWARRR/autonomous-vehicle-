@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <world name="image_world">
-<include>
-    <uri>file:///home/hornet/autonomous-vehicle-/src/mobile_robot/worlds/track_walls.sdf</uri>
-</include>
 
     <!-- Light -->
         <light name="sun" type="directional">
@@ -48,7 +45,7 @@
 
         <!-- Track walls -->
         <include>
-        <uri>file://track_walls.sdf</uri>
+            <uri>file:///home/hornet/autonomous-vehicle-/src/mobile_robot/worlds/track_walls.sdf</uri>
         </include>
 
     </world>
