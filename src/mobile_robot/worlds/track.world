@@ -1,22 +1,28 @@
 <?xml version="1.0" ?>
-<sdf version="1.7">
+<sdf version="1.9">
     <world name="track_world">
+
+        <!-- Ground -->
+        <include>
+        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
+        </include>
 
         <!-- Sun -->
         <include>
         <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
         </include>
 
-        <!-- Ground plane -->
-        <include>
-        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
-        </include>
-
-        <!-- Track walls -->
+        <!-- Track -->
         <include>
         <uri>model://track_walls</uri>
-        <pose>0 0 0 0 0 0</pose>
         </include>
+
+        <!-- REQUIRED for LiDAR -->
+        <plugin
+        filename="libgz-sim-sensors-system.so"
+        name="gz::sim::systems::Sensors">
+        <render_engine>ogre2</render_engine>
+        </plugin>
 
     </world>
 </sdf>

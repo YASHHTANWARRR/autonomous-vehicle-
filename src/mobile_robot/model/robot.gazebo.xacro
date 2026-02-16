@@ -75,12 +75,7 @@
     </plugin>   
 </gazebo>
 
-<!--lidar added -->
-<gazebo>
-    <plugin filename="libgz-sim-sensors-system.so" name="gz::sim::systems::Sensors">
-        <render_engine>ogre2</render_engine>
-    </plugin>
-</gazebo>
+
 
 <!-- LiDAR sensor -->
 <gazebo reference="lidar_link">
