@@ -1,4 +1,5 @@
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/launch/gazebo_model.launch.py
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/launch/spawn_in_track.launch.py
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/.gitignore
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/Activate.ps1
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/.venv/bin/activate
@@ -1897,6 +1898,7 @@
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/robot.gazebo.xacro
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/model/robot.xacro
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/parameters/bridge_parameters.yaml
+/home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/config/nav2_map.rviz
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/ament_index/resource_index/package_run_dependencies/mobile_robot
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/ament_index/resource_index/parent_prefix_path/mobile_robot
 /home/hornet/autonomous-vehicle-/install/mobile_robot/share/mobile_robot/environment/ament_prefix_path.sh

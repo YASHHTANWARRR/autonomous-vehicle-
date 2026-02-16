@@ -313,6 +313,9 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "model" "parameters" "DESTINATION" "share/mobile_robot")
 ament_cmake_symlink_install_directory("/home/hornet/autonomous-vehicle-/src/mobile_robot" DIRECTORY "launch" "model" "parameters" "DESTINATION" "share/mobile_robot")
 
+# install(DIRECTORY "config" "DESTINATION" "share/mobile_robot")
+ament_cmake_symlink_install_directory("/home/hornet/autonomous-vehicle-/src/mobile_robot" DIRECTORY "config" "DESTINATION" "share/mobile_robot")
+
 # install(FILES "/home/hornet/autonomous-vehicle-/build/mobile_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mobile_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/hornet/autonomous-vehicle-/src/mobile_robot" FILES "/home/hornet/autonomous-vehicle-/build/mobile_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mobile_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
